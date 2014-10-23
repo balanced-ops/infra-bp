@@ -3,13 +3,13 @@
 from confu import aws, ansible
 
 
-aws.cxn.activate(profile_name='poundpay', default_region='us-west-1')
+aws.cxn.activate(profile_name='bp', default_region='us-west-1')
 
 inventory = ansible.AWSRemoteInventory(
     instances=(
         aws.instances()
         .regions('us-west-1')
-        .filter(('tag:confu:infra-silo', 'vault'))
+        .filter(('tag:confu:infra-silo', 'bp'))
         .filter(('instance-state-name', 'running'))
     ),
     group_tags=[
