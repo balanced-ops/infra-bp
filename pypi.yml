@@ -1,0 +1,20 @@
+---
+
+- hosts: all
+  vars_files:
+    - "infras/global/vars/{{ aws_account }}.yml"
+    - "infras/global/vars/{{ aws_account }}_{{ aws_region }}.yml"
+  roles:
+  - base
+  - ntp
+
+- hosts: pypi
+  vars_files:
+    - "infras/global/vars/{{ aws_account }}.yml"
+    - "infras/global/vars/{{ aws_account }}_{{ aws_region }}.yml"
+    - "vars/{{ aws_account }}_{{ app_env }}.yml"
+    - "vars/{{ aws_account }}_{{ aws_region }}_{{ app_env }}.yml"
+  vars:
+    pypi_hostname: devpi.vandelay.io
+  roles:
+  - pypi

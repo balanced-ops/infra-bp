@@ -1,0 +1,31 @@
+---
+
+- src: https://github.com/balanced-cookbooks/infra-global.git
+  version: master
+  path: infras
+  name: global
+
+- src: https://github.com/balanced-cookbooks/ansible-base.git
+  version: 3d3104aa1c5115dd90ab967f13bb8e0dcde11eda
+  path: roles
+  name: base
+
+- src: https://github.com/balanced-cookbooks/ansible-rsyslog.git
+  version: master
+  path: roles
+  name: rsyslog
+
+- src: https://github.com/ANXS/monit.git
+  version: master
+  path: roles
+  name: monit
+
+- src: https://github.com/resmo/ansible-role-ntp.git
+  version: master
+  path: roles
+  name: ntp
+
+- src: https://github.com/zenoamaro/ansible-supervisord.git
+  version: master
+  path: roles
+  name: supervisord

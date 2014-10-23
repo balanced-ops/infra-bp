@@ -3,6 +3,7 @@
 **TOC**
 
 - [Setup](#setup)
+    - [Roles](#roles)
 - [Hacking](#hacking)
     - [pypi](#pypi)
 
@@ -16,6 +17,11 @@ mkvirtualenv infra-bp
 (infra-bp) pip install -r requirements.txt
 ```
 
+### Roles
+
+```bash
+ansible-galaxy install -r requirements.yml -p `pwd`/roles
+```
 
 ## Hacking
 
