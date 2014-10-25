@@ -8,7 +8,7 @@
 - [Hacking](#hacking)
     - [pypi](#pypi)
 
-## introduction
+## Design
 
 design of `infra-bp`:
 
